@@ -1,0 +1,119 @@
+# evofw3 supported boards configuration
+#
+# For more information see:
+# * https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
+# * https://github.com/arduino/Arduino/wiki/Arduino-Hardware-Cores-migration-guide-from-1.0-to-1.6
+#
+
+menu.cpu=Processor
+menu.pinout=Pinout
+
+################################################################################
+################################## atmega328p ##################################
+################################################################################
+atmega328p.name=atmega328p (SW UART)
+atmega328p.evofw3.uart=-DSWUART
+atmega328p.evofw3.pins=
+
+atmega328p.upload.tool=avrdude
+atmega328p.upload.protocol=arduino
+atmega328p.upload.maximum_size=32256
+atmega328p.upload.maximum_data_size=2048
+atmega328p.upload.speed=115200
+
+atmega328p.bootloader.tool=avrdude
+atmega328p.bootloader.unlock_bits=0x3F
+atmega328p.bootloader.lock_bits=0x0F
+
+atmega328p.build.board=EVOFW3_ATMEGA328P
+atmega328p.build.mcu=atmega328p
+atmega328p.build.core=arduino:arduino
+atmega328p.build.variant=arduino:standard
+
+atmega328p.build.extra_flags= {evofw3.uart} {evofw3.pins}
+
+############################# 5V / 16MHz #############################
+atmega328p.menu.cpu.16MHz=atmega328p (5V, 16 MHz)
+atmega328p.menu.cpu.16MHz.build.f_cpu=16000000L
+
+atmega328p.menu.cpu.16MHz.bootloader.low_fuses=0xFF
+atmega328p.menu.cpu.16MHz.bootloader.high_fuses=0xDE
+atmega328p.menu.cpu.16MHz.bootloader.extended_fuses=0xFD
+atmega328p.menu.cpu.16MHz.bootloader.file=optiboot/optiboot_atmega328.hex
+
+######################### atmega328p / Standard ###############################
+atmega328p.menu.pinout.standard=Nano
+
+atmega328p.menu.pinout.standard.evofw3.pins=-DCCSEL=2 -DGDO0=INT1 -DGDO2=INT0
+
+######################### atmega328p / swapped ################################
+atmega328p.menu.pinout.swapped=Pro
+
+atmega328p.menu.pinout.swapped.evofw3.pins=-DCCSEL=2 -DGDO0=INT0 -DGDO2=INT1
+
+################################################################################
+################################## atmega32u4 ##################################
+################################################################################
+atmega32u4.name=atmega32u4 (HW UART)
+atmega32u4.evofw3.uart=-DHWUART
+
+atmega32u4.upload.tool=avrdude
+atmega32u4.upload.protocol=avr109
+atmega32u4.upload.maximum_size=28672
+atmega32u4.upload.maximum_data_size=2560
+atmega32u4.upload.speed=57600
+atmega32u4.upload.disable_flushing=true
+atmega32u4.upload.use_1200bps_touch=true
+atmega32u4.upload.wait_for_upload_port=true
+
+atmega32u4.bootloader.tool=avrdude
+atmega32u4.bootloader.unlock_bits=0x3F
+atmega32u4.bootloader.lock_bits=0x2F
+
+atmega32u4.build.board=EVOFW3_ATMEGA32U4
+atmega32u4.build.mcu=atmega32u4
+atmega32u4.build.core=arduino:arduino
+atmega32u4.build.variant=promicro
+
+atmega32u4.build.usb_manufacturer="ghoti57"
+atmega32u4.build.usb_product="evofw3 atmega32u4"
+atmega32u4.build.vid=0x1b4f
+
+atmega32u4.build.extra_flags={build.usb_flags} {evofw3.uart} {evofw3.pins}
+
+######################### 3.3V / 8MHz ################################
+atmega32u4.menu.cpu.8MHz=atmega32u4 (3.3V 8 MHz)
+atmega32u4.menu.cpu.8MHz.build.f_cpu=8000000L
+
+atmega32u4.bootloader.low_fuses=0xFF
+atmega32u4.bootloader.high_fuses=0xD8
+atmega32u4.menu.cpu.8MHz.bootloader.extended_fuses=0xFE
+atmega32u4.menu.cpu.8MHz.bootloader.file=caterina/Caterina-promicro8.hex
+
+atmega32u4.menu.cpu.8MHz.build.pid.0=0x9204
+atmega32u4.menu.cpu.8MHz.build.pid.1=0x9205
+atmega32u4.menu.cpu.8MHz.build.pid=0x9204
+
+############################# 5V / 16MHz #############################
+atmega32u4.menu.cpu.16MHz=atmega32u4 (5V, 16 MHz)
+atmega32u4.menu.cpu.16MHz.build.f_cpu=16000000L
+
+atmega32u4.menu.cpu.16MHz.bootloader.low_fuses=0xFF
+atmega32u4.menu.cpu.16MHz.bootloader.high_fuses=0xD8
+atmega32u4.menu.cpu.16MHz.bootloader.extended_fuses=0xCB
+atmega32u4.menu.cpu.16MHz.bootloader.file=caterina/Caterina-promicro16.hex
+
+atmega32u4.menu.cpu.16MHz.build.pid.0=0x9205
+atmega32u4.menu.cpu.16MHz.build.pid.1=0x9206
+atmega32u4.menu.cpu.16MHz.build.pid=0x9206
+
+############################### Pro Micro #################################
+atmega32u4.menu.pinout.ProMicro=Pro Micro
+
+atmega32u4.menu.pinout.ProMicro.evofw3.pins=-DCCSEL=6
+
+############################### SHA atmega32u4 #################################
+atmega32u4.menu.pinout.SHA=SHA atmega32u4
+
+atmega32u4.menu.pinout.SHA.evofw3.pins=-DCCSEL=1
+
