@@ -3,6 +3,10 @@
     {
       "name": "evofw3",
       "maintainer": "ghoti57",
+      "websiteURL": "https://github.com/ghoti57/evofw3/wiki",
+      "help": {
+        "online": "https://github.com/ghoti57/evofw3/wiki/installing-arduino-ide/board-add-ons-with-arduino-board-manager"
+      },
       "platforms": [
         {
           "name": "Evofw3 avr Boards",
@@ -13,13 +17,16 @@
           "archiveFileName": "evofw3_boards_avr-1.0.0.tar.gz",
           "checksum": "SHA256:DEBC2E7ED234F4314D110CB32D66F3AD98CDBFAEAFC1C1849435B42C02D8F9A9",
           "size": "72013",
-
+          "help": {
+            "online": "https://github.com/ghoti57/evofw3/wiki/installing-arduino-ide/board-add-ons-with-arduino-board-manager"
+          },
           "boards": [
             { "name": "atmega328p 5V 16 MHz" },
             { "name": "atmega32u4 3V3 8 Mhz" },
             { "name": "atmega32u4 5V 16 MHz" },
             { "name": "SHA atmega32u4 8MHz"  }
-          ]
+          ],
+          "toolsDependencies": []
         }
       ]
     }
