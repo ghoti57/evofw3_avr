@@ -27,7 +27,7 @@
             { "name": "SHA atmega32u4 8MHz" },
           ],
           "toolsDependencies": []
-        }
+        },
       }
     ]
   ]
