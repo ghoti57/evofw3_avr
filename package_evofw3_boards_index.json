@@ -24,7 +24,7 @@
             { "name": "atmega328p 5V 16 MHz" },
             { "name": "atmega32u4 3V3 8 Mhz" },
             { "name": "atmega32u4 5V 16 MHz" },
-            { "name": "SHA atmega32u4 8MHz" },
+            { "name": "SHA atmega32u4 8MHz"  }
           ],
           "toolsDependencies": []
         }
