@@ -14,6 +14,7 @@ menu.pinout=Pinout
 atmega328p.name=atmega328p (SW UART)
 atmega328p.evofw3.uart=-DSWUART
 atmega328p.evofw3.pins=
+atmega328p.evofw3.opts=
 
 atmega328p.upload.tool=avrdude
 atmega328p.upload.protocol=arduino
@@ -30,7 +31,7 @@ atmega328p.build.mcu=atmega328p
 atmega328p.build.core=arduino:arduino
 atmega328p.build.variant=arduino:standard
 
-atmega328p.build.extra_flags= {evofw3.uart} {evofw3.pins}
+atmega328p.build.extra_flags= {evofw3.uart} {evofw3.pins} {evofw3.opts}
 
 ############################# 5V / 16MHz #############################
 atmega328p.menu.cpu.16MHz=atmega328p (5V, 16 MHz)
@@ -56,6 +57,8 @@ atmega328p.menu.pinout.swapped.evofw3.pins=-DCCSEL=2 -DGDO0=INT0 -DGDO2=INT1
 ################################################################################
 atmega32u4.name=atmega32u4 (HW UART)
 atmega32u4.evofw3.uart=-DHWUART
+atmega32u4.evofw3.pins=
+atmega32u4.evofw3.opts=
 
 atmega32u4.upload.tool=avrdude
 atmega32u4.upload.protocol=avr109
@@ -79,7 +82,7 @@ atmega32u4.build.usb_manufacturer="ghoti57"
 atmega32u4.build.usb_product="evofw3 atmega32u4"
 atmega32u4.build.vid=0x1b4f
 
-atmega32u4.build.extra_flags={build.usb_flags} {evofw3.uart} {evofw3.pins}
+atmega32u4.build.extra_flags={build.usb_flags} {evofw3.uart} {evofw3.pins} {evofw3.opts}
 
 ######################### 3.3V / 8MHz ################################
 atmega32u4.menu.cpu.8MHz=atmega32u4 (3.3V 8 MHz)
@@ -115,5 +118,6 @@ atmega32u4.menu.pinout.ProMicro.evofw3.pins=-DCCSEL=6
 ############################### SHA atmega32u4 #################################
 atmega32u4.menu.pinout.SHA=SHA atmega32u4
 
-atmega32u4.menu.pinout.SHA.evofw3.pins=-DCCSEL=1
+atmega32u4.menu.pinout.SHA.evofw3.pins=-DCCSEL=0
+atmega32u4.menu.pinout.SHA.evofw3.opts=-DDFU
 
