@@ -47,8 +47,27 @@
             { "name": "SHA atmega32u4 8MHz"  }
           ],
           "toolsDependencies": []
+        },
+        {
+          "name": "Evofw3 avr Boards",
+          "architecture": "avr",
+          "version": "1.0.2",
+          "category": "Contributed",
+          "url": "https://github.com/ghoti57/evofw3_avr/archive/V1.0.2.tar.gz",
+          "archiveFileName": "evofw3_boards_avr-1.0.2.tar.gz",
+          "checksum": "SHA-256:A559417817F5733BEC8D95BBFCB52BA2DEB0766C4A80073E3546EEEBDAF02934",
+          "size": "72507",
+          "help": {
+            "online": "https://github.com/ghoti57/evofw3/wiki"
+          },
+          "boards": [
+            { "name": "atmega328p 5V 16 MHz" },
+            { "name": "atmega32u4 3V3 8 Mhz" },
+            { "name": "atmega32u4 5V 16 MHz" },
+            { "name": "SHA atmega32u4 8MHz"  }
+          ],
+          "toolsDependencies": []
         }
-
       ]
     }
   ]
