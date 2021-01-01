@@ -7,6 +7,7 @@
 
 menu.cpu=Processor
 menu.pinout=Pinout
+menu.boot=Bootloader
 
 ################################################################################
 ################################## atmega328p ##################################
@@ -20,7 +21,6 @@ atmega328p.upload.tool=avrdude
 atmega328p.upload.protocol=arduino
 atmega328p.upload.maximum_size=32256
 atmega328p.upload.maximum_data_size=2048
-atmega328p.upload.speed=115200
 
 atmega328p.bootloader.tool=avrdude
 atmega328p.bootloader.unlock_bits=0x3F
@@ -51,6 +51,13 @@ atmega328p.menu.pinout.standard.evofw3.pins=-DCCSEL=2 -DGDO0=INT1 -DGDO2=INT0
 atmega328p.menu.pinout.swapped=Pro
 
 atmega328p.menu.pinout.swapped.evofw3.pins=-DCCSEL=2 -DGDO0=INT0 -DGDO2=INT1
+
+############################# Bootloader #############################
+atmega328p.menu.boot.new=Standard Bootloader
+atmega328p.menu.boot.new.upload.speed=115200
+
+atmega328p.menu.boot.old=Old Bootloader
+atmega328p.menu.boot.old.upload.speed=57600
 
 ################################################################################
 ################################## atmega32u4 ##################################
