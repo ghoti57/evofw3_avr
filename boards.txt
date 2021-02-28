@@ -57,9 +57,6 @@ atmega328p.menu.pinout.swapped.evofw3.pins=-DCCSEL=2 -DGDO0=INT0 -DGDO2=INT1
 atmega328p.menu.host.115200=115200
 atmega328p.menu.host.115200.evofw3.opts=-DHOST_RATE=115200
 
-atmega328p.menu.host.76800=76800
-atmega328p.menu.host.76800.evofw3.opts=-DHOST_RATE=76800
-
 atmega328p.menu.host.57600=57600
 atmega328p.menu.host.57600.evofw3.opts=-DHOST_RATE=57600
 
