@@ -71,12 +71,12 @@
         {
           "name": "Evofw3 avr Boards",
           "architecture": "avr",
-          "version": "1.0.5",
+          "version": "1.0.6",
           "category": "Contributed",
-          "url": "https://github.com/ghoti57/evofw3_avr/archive/V1.0.5.tar.gz",
-          "archiveFileName": "evofw3_boards_avr-1.0.5.tar.gz",
-          "checksum": "SHA-256:3BEE05DFBC608F27DB5ECC3914B64A480453869129EE1A9D50A3C36FC597849C",
-          "size": "72701",
+          "url": "https://github.com/ghoti57/evofw3_avr/archive/V1.0.6.tar.gz",
+          "archiveFileName": "evofw3_boards_avr-1.0.6.tar.gz",
+          "checksum": "SHA-256:55A9241A948669427136667E8EA9690E06B565B1A1699D06D05856CDEFAAFA02",
+          "size": "72756",
           "help": {
             "online": "https://github.com/ghoti57/evofw3/wiki"
           },
