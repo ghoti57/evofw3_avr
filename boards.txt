@@ -128,11 +128,11 @@ atmega32u4.menu.cpu.16MHz.build.pid=0x9206
 ############################### Pro Micro #################################
 atmega32u4.menu.pinout.ProMicro=Pro Micro
 
-atmega32u4.menu.pinout.ProMicro.evofw3.pins=-DCCSEL=6
+atmega32u4.menu.pinout.ProMicro.evofw3.pins=-DCCSEL=6 -DGDO0=INT3 -DGDO2=INT2
 
 ############################### SHA atmega32u4 #################################
 atmega32u4.menu.pinout.SHA=SHA atmega32u4
 
-atmega32u4.menu.pinout.SHA.evofw3.pins=-DCCSEL=0
+atmega32u4.menu.pinout.SHA.evofw3.pins=-DCCSEL=0 -DGDO0=INT3 -DGDO2=INT2
 atmega32u4.menu.pinout.SHA.evofw3.opts=-DDFU
 
